@@ -157,7 +157,7 @@ function Home() {
         <button style={{margin:'0 auto', width:'100%'}} type="submit">Submit</button>
       </form>
 
-      {!blog && (
+      {blog && (
       <div style={{ marginTop: "20px" }}>
         
         {blog.map((item, index) => (
