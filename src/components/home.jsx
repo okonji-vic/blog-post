@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import "./home.css";
+import "./Home.css";
 
 function Home() {
   const [inputValue1, setInputValue1] = React.useState(""); // Name
