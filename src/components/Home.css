@@ -1,6 +1,6 @@
 /* General styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f7fc;
     color: #333;
     margin: 0;
@@ -28,6 +28,7 @@ body {
     text-align: center;
     color: #2a7ae4;
     margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
   }
   
   /* Form styling */
