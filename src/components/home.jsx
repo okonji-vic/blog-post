@@ -174,7 +174,7 @@ function Home() {
             <button
               className="delete-button"
               onClick={() => deleteBlog(index)}
-            >
+            > 
               Delete
             </button>
           </div>
