@@ -88,8 +88,7 @@ function Home() {
 
   return (
     <div className="main-container">
-      <h1>Home</h1>
-      <p>Create your blog post</p>
+      <h1>Create your blog post</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

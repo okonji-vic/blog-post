@@ -21,7 +21,7 @@ function formatDateTime(date, time) {
             <img src={item.image} alt="blog" />
             <div className="blog-card-content">
                 <h2 className="blog-card-title">{item.title}</h2>
-                <p className="blog-card-excerpt">Author:{item.name.toUpperCase()}</p>
+                <p className="blog-card-excerpt">Author:{item.name}</p>
                 
                 <div className="blog-card-date-time">
                     
