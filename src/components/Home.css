@@ -1,0 +1,148 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Main container */
+  div {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  div:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Header styling */
+  h1 {
+    text-align: center;
+    color: #2a7ae4;
+    margin-bottom: 20px;
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input, textarea, button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #2a7ae4;
+    box-shadow: 0 0 5px rgba(42, 122, 228, 0.5);
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  /* Button styling */
+  button {
+    background: #2a7ae4;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .delete-button {
+    background: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 80px;
+    margin: 0 auto;
+  }
+  
+  button:hover {
+    background: #1f5cae;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(42, 122, 228, 0.3);
+  }
+  
+  /* Blog list styling */
+  .link {
+    text-decoration: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  li,h3 {
+    background: #2a7ae4;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  h3:hover {
+    transform: translate(5px, 5px);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (min-width: 768px) {
+    div {
+      padding: 40px;
+    }
+  
+    form {
+        display: grid;
+        gap: 20px;
+        grid-template-rows: 1fr 1fr;
+      
+
+    }
+  
+    input, textarea, button {
+      padding: 15px;
+      font-size: 18px;
+    }
+  
+    textarea {
+      height: 150px;
+    }
+  
+    ul {
+      margin-top: 30px;
+    }
+  
+    li {
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  
+  
