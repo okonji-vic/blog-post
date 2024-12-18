@@ -154,7 +154,7 @@ function Home() {
           </div>
         )}
 
-        <button type="submit">Submit</button>
+        <button style={{margin:'0 auto'}} type="submit">Submit</button>
       </form>
 
       <div style={{ marginTop: "20px" }}>
