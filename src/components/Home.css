@@ -44,6 +44,7 @@ body {
     border: 1px solid #ddd;
     transition: all 0.3s ease-in-out;
     width: 94%;
+    background-color: #231d1d34;
   }
   
   input:focus, textarea:focus {

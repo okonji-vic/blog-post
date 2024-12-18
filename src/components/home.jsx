@@ -154,10 +154,12 @@ function Home() {
           </div>
         )}
 
-        <button style={{margin:'0 auto'}} type="submit">Submit</button>
+        <button style={{margin:'0 auto', width:'100%'}} type="submit">Submit</button>
       </form>
 
+      {!blog && (
       <div style={{ marginTop: "20px" }}>
+        
         {blog.map((item, index) => (
           <div key={index} style={{ marginBottom: "20px" }}>
              <Link className="link" to="/blog" key={index} state={item}>
@@ -178,7 +180,8 @@ function Home() {
             </button>
           </div>
         ))}
-      </div>
+        
+      </div>)}
       <Outlet />
     </div>
   );
