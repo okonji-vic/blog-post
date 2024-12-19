@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import JSConfetti from "js-confetti";
 import "./Home.css";
 
 function Home() {
@@ -66,6 +67,15 @@ function Home() {
     setBlog(updatedBlogs); // Update state
     localStorage.setItem("blogs", JSON.stringify(updatedBlogs)); // Save to localStorage
     clearForm(); // Clear the form
+
+    
+    
+    new JSConfetti().addConfetti({
+      confettiColors: ["#ff0000", "#00ff00", "#0000ff"],
+      // emojis: ["🎉", "✨", "🌟", "💥"],
+      confettiNumber: 350,
+    }); // Celebrate!
+    alert("Blog submitted successfully!");
   };
 
   const clearForm = () => {
