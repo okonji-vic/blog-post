@@ -167,7 +167,7 @@ function Home() {
         <button style={{margin:'0 auto', width:'100%'}} type="submit">Submit</button>
       </form>
 
-      {blog && (
+      {blog.length > 0 && (
       <div style={{ marginTop: "20px" }}>
         
         {blog.map((item, index) => (
@@ -192,7 +192,7 @@ function Home() {
         ))}
         
       </div>)}
-      <Outlet />
+      {/* <Outlet /> */}
     </div>
   );
 }
