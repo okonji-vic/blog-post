@@ -1,19 +1,14 @@
 
-div {
-    padding: 40px;
 
-}
 
 .div-link {
     text-decoration: none;
     color: #007bff;
 }
 
-div h1 {
-    margin-bottom: 20px;
-}
 
-button {
+
+.div-link button {
     width: 40%;
     margin: 0 auto;
 }
