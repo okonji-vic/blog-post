@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./custom404.css";
 
 function Custom404() {
+    
     return (
         <div className="custom-404">
         <h1>404: Page Not Found</h1>

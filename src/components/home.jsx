@@ -2,8 +2,10 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import JSConfetti from "js-confetti";
 import "./Home.css";
+// import { ThemeContext } from "../App";
 
 function Home() {
+  const [showForm, setShowForm] = React.useState(false);
   const [inputValue1, setInputValue1] = React.useState(""); // Name
   const [inputValue2, setInputValue2] = React.useState(""); // email
   const [inputValue3, setInputValue3] = React.useState(""); // Blog Title
@@ -14,6 +16,8 @@ function Home() {
   const [inputValue8, setInputValue8] = React.useState(null); // Image file
   const [blog, setBlog] = React.useState([]); // Blog list
   const [imagePreview, setImagePreview] = React.useState(""); // Image preview URL
+  // const theme = React.useContext(ThemeContext);
+  // const className = "home-" + theme;
 
   // Load blogs from localStorage on mount
   React.useEffect(() => {
@@ -67,6 +71,7 @@ function Home() {
     setBlog(updatedBlogs); // Update state
     localStorage.setItem("blogs", JSON.stringify(updatedBlogs)); // Save to localStorage
     clearForm(); // Clear the form
+    setShowForm(false); // Hide the form
 
     
     
@@ -96,10 +101,12 @@ function Home() {
     localStorage.setItem("blogs", JSON.stringify(updatedBlogs));
   };
 
+  
+
   return (
-    <div className="main-container">
+    <div >
       <h1>Create your blog post</h1>
-      <form onSubmit={handleSubmit}>
+      {showForm && <form onSubmit={handleSubmit}>
         <input
           type="text"
           value={inputValue1}
@@ -165,7 +172,9 @@ function Home() {
         )}
 
         <button style={{margin:'0 auto', width:'100%'}} type="submit">Submit</button>
-      </form>
+        <button style={{margin:'0 auto', width:'100%'}} onClick={() => setShowForm(false) }>Cancel</button>
+      </form>}
+      {!showForm && <button style={{margin:'0 auto', width:'50%'}} onClick={() => setShowForm(true)} >Create Blog</button>}
 
       {blog.length > 0 && (
       <div style={{ marginTop: "20px" }}>
