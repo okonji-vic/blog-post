@@ -101,10 +101,12 @@ function Home() {
     localStorage.setItem("blogs", JSON.stringify(updatedBlogs));
   };
 
-  
+  const createBlog = () => {
+    console.log("Blog created");
+  }
 
   return (
-    <div >
+    <div className="">
       <h1>Create your blog post</h1>
       {showForm && <form onSubmit={handleSubmit}>
         <input
@@ -182,7 +184,7 @@ function Home() {
         {blog.map((item, index) => (
           <div key={index} style={{ marginBottom: "20px" }}>
              <Link className="link" to="/blog" key={index} state={item}>
-              <h3>{item.title}</h3>
+              <h4>{item.title}</h4>
             </Link>
             {item.image && (
               <img
